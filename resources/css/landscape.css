@@ -1,0 +1,253 @@
+@media(orientation: landscape){
+	/*css 變數*/
+		:root{
+			--css-gallery-size:25vw;
+			--css-theme-color:#F00;
+			--css-header-color:#FFF;
+			--css-footer-color:#FFF;
+		}
+		body{
+			font-size: 20px;
+		}
+		.slider{
+			height:100vh;
+			width: 100%;
+			padding: 0 !important;
+			margin:0 !important;
+		}
+		.invited-area{
+			position:absolute;
+			width:100vw;
+			height:100vh;
+			top: 0;
+		}
+		.wrapper{
+			width: 100%;
+			height: 100vh;
+			background-image: url(../img/wrapper.jpg);
+			background-size: cover;
+   			background-position: center;
+		}
+		.landscape{
+			width:inherit;
+			height:inherit;
+			background: no-repeat fixed;
+			background-size: cover;
+			background-position: center;
+		}
+		.landscape1{
+			height: 100vh !important;
+		}
+		#invited_text {
+		    font-family: 'Pacifico', cursive;
+		    font-size: 2.5rem;
+		    text-shadow: 4px 2px 2px #333;
+		    opacity: 0.95;
+		    font-weight: 800 !important;
+		}
+		.light-border{
+			position: relative;
+		    color: #FFF;
+		    border-top: medium double #fff;
+		    border-bottom: medium double #fff;
+		}
+		.banner-text::before {
+			font-family: "Font Awesome 5 Free";
+		    display: block;
+		    position: absolute;
+		    font-size: 26px;
+		    color: #F00;
+		    content: "\f004";
+		    width:100%;
+		    text-align: center;
+		    top: 0;
+		    margin-top: -20px;
+		    margin-left: -10px;
+		    font-weight: 900;
+		    text-shadow: 1px 2px 5px #000;
+		}
+		.banner-text::after {
+			font-family: "Font Awesome 5 Free";
+		    display: block;
+		    position: absolute;
+		    top:0;
+		    font-size: 26px;
+		    color: #FFF;
+		    content: "\f004";
+		    width:100%;
+		    text-align: center;
+		    margin-top: -20px;
+		    margin-left:10px;
+		    font-weight: 900;
+		    text-shadow: 1px 2px 5px #000;
+		}
+		#banner_date {
+		    font-family: 'Oswald', sans-serif;
+		    letter-spacing: 3px;
+		    font-size: 14px;
+		    text-shadow: #000 2px 2px 2px;
+		}
+		.logo{
+			width:4rem;
+			height:4rem;
+			background-color: red;
+    		border-radius: 50%;
+		}
+		.menu > .d-flex.justify-content-center> .p-2.align-self-center{
+			font-size: 1rem;
+			color:#3E3E3E;
+		}
+		.gallery-size{
+			width:var(--css-gallery-size);
+			height:var(--css-gallery-size);
+			background-position: center;
+    		background-size: cover;
+    		position: relative;
+			overflow: hidden;
+		}
+		header{
+			height: 0 !important;
+		}
+		#portrait-menu{
+			display: block;
+			position: fixed;
+			top:5px;
+			right: 5px;
+			color:white;
+		}
+		#navi{
+			display: none;
+			background-color: var(--css-header-color) !important;
+			height:15vh;
+		}
+		.nav-fixed{
+			z-index: 10;          
+			position: fixed;      
+			top: 0;
+			left: 0;
+			margin-top: 0;
+			min-width: 100%;
+			opacity: 0.94;
+			height:15vh;
+			background-color: var(--css-header-color) !important;
+			transition: opacity .5s ease-out;
+		}
+		.footer{
+			background-color: var(--css-footer-color) !important;
+		}
+	.editing{
+		display: none !important;
+	}
+	.w2{
+		font-family: 'Pacifico', cursive;
+		color: white;
+		font-size: 4rem;
+		text-shadow: #000 3px 3px;
+	}
+	.host-invite-text{
+		color:white;
+		font-size: 2rem;
+		text-shadow: #000 1px 1px;
+	}
+	.host-invite{
+		color:white;
+		font-size: 2rem;
+		text-shadow: #000 1px 1px;
+	}
+	.countdown-circle{
+		width:5rem;
+		height:5rem;
+		background-color: #f0394d;
+		border-radius: 50%;
+		margin-right:2.5rem;
+	}
+	.countdown-circle > div{
+		text-align: center;
+	    font-size: 2rem;
+	    font-weight: 600;
+	    font-family: 'Pacifico';
+	    height: 4rem;
+	    line-height: 3.7rem;
+	    color:white;
+	}
+	.countdown-circle.last{
+		margin-right:0 !important;
+	}
+	.countdown-day-circle{
+		font-family: 'Oswald', cursive;
+		color: white;
+		font-size: 2rem;
+		text-shadow: #000 2px 2px;
+		width:5rem;
+		margin-right:2.5rem;
+		text-align: center;
+		padding:0 !important;
+	}
+	.countdown-day-circle.last{
+		margin-right:0 !important;
+	}
+	.countdown-text{
+		font-size:1.5rem;
+		color:white;
+		text-shadow: #000 1px 1px;
+	}
+	.countdown-area{
+		margin-top:1rem;
+	}
+	.countdown-area-2{
+		margin-top:0;
+		padding:0 !important;
+	}
+	.rsvp{
+		font-family: 'Pacifico', cursive;
+	    color: white;
+	    font-size: 3.5rem;
+	    text-shadow: #000 3px 3px 4px;
+	    text-align: center;
+	}
+	.rsvp-info{
+		font-size:1.2rem;
+		color:white;
+		text-align: center;
+		text-shadow: #000 1px 1px 2px;
+	}
+	.rsvp-info2{
+		font-size:1.2rem;
+		color:white;
+		text-align: center;
+		text-shadow: #000 1px 1px 2px;
+	}
+
+	.thank-you-eng{
+		font-family: 'Pacifico', cursive;
+	    color: white;
+	    font-size: 2rem;
+	    text-shadow: #000 2px 2px 3px;
+	    text-align: center;
+	}
+	.thank-you-tw{
+		font-size:1.2rem;
+		color:white;
+		text-align: center;
+		text-shadow: #000 2px 2px 3px;
+	}
+
+	.hide-important{
+		display: none !important;
+	}
+
+	#google_form{
+		padding:0 20% 2rem 20% !important;
+	}
+	.date-info{
+		margin-bottom:1.5rem !important;
+	}
+	.date-info.last{
+		margin-bottom:0 !important;
+	}
+	.for-view-img{
+		object-fit: cover !important;
+		height:100vh !important;
+		width:100% !important;
+	}
+}
