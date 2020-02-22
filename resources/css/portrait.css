@@ -9,6 +9,9 @@
 		body{
 			font-size: 16px;
 		}
+		.display-in-portrait{
+			display: block !important;
+		}
 		.slider{
 			height:100vh;
 			width: 100%;
@@ -80,7 +83,7 @@
 		#banner_date {
 		    font-family: 'Oswald', sans-serif;
 		    letter-spacing: 3px;
-		    font-size: 14px;
+		    font-size: 1rem;
 		    text-shadow: #000 2px 2px 2px;
 		}
 		.logo{
@@ -207,10 +210,15 @@
 		text-align: center;
 	}
 	.rsvp-info2{
-		font-size:1.2rem;
+		font-size:1rem;
 		color:black;
 		text-align: center;
 		text-shadow: #FFF 1px 1px 2px;
+		padding:0 0 5px 0 !important;
+	}
+
+	#thank_you{
+		padding: 0 !important;
 	}
 
 	.thank-you-eng{

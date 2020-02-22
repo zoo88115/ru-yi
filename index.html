@@ -28,6 +28,7 @@
     <style>
 		@import url('https://fonts.googleapis.com/css?family=Pacifico&display=swap');
 		@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+		@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
 		@keyframes ldio-l78vwtjns6 {
 		  0% {
 		    top: 109.97999999999999px;
@@ -43,6 +44,14 @@
 		    height: 184.85999999999999px;
 		    opacity: 0;
 		  }
+		}
+		@media screen and (max-width: 360px){
+			body{
+					font-size: 16px;
+				}
+			.ww1{
+				width:3.5rem !important;
+			}
 		}
 
 		.ldio-l78vwtjns6 div {
@@ -147,6 +156,7 @@
 			    //ary[0] = 'id=U001'，ary[1] = 'name=GQSM'
 			    if(ary.length > 0 && ary[0].split('=').length > 0 && ary[0].split('=')[0] == 'replied' && ary[0].split('=')[1] == '1'){
 			    	$('#google_form').hide();
+			    	$('#form_text').hide();
 			    	$('#thank_you').show();
 			    	$('#rsvp_area').addClass('hide-important');
 			    	$('html,body').animate({scrollTop:$('#rsvp_area').offset().top}, 500);
@@ -228,7 +238,7 @@
 	<section id="top-img">
 		<div id="top-scroll-img" class="slider wrapper">
 			<div class="invited-area">
-				<div class="d-flex flex-column justify-content-center" style="height: 100%;color:white">
+				<div class="d-flex flex-column" style="height: 100%;color:white;justify-content: center">
 	                <div class="p-2 align-self-center" id="invited_text">
 	                                        You're Invited
 	                </div>
@@ -260,12 +270,16 @@
 	<i id="portrait-menu" class="fas fa-bars fa-2x" style="display: none"></i>
 	<!--婚紗照-->
 	<div class="container-fluid menu-1" style="width:100%;background-color: #eee">
-		<div class="d-flex flex-column" style="padding:2rem">
-			<div style="text-align: center;font-size: 1.6rem;display: none">WEDDING<i class="far fa-heart" style="color:pink;margin:0 10px"></i>PHOTOS</div>
-			<div style="text-align: center">
-				We know little about love.Love is like a pear.</br>
+		<div class="d-flex flex-column" style="padding:2rem 0;font-family: 'Dancing Script'">
+			<div style="text-align: center;display: none;font-size:1.2rem" class="display-in-portrait">
+				We know little about love.</br>
+				Love is like a pear.</br>
 				A pear is sweet and has a distinct shape.</br>
 				Try to define the shape of a pear.
+			</div>
+			<div style="text-align: center;display: none;font-size:2rem" class="display-in-landscape">
+				We know little about love. Love is like a pear.</br>
+				A pear is sweet and has a distinct shape. Try to define the shape of a pear.
 			</div>
 		</div>
 		<div class="row" id="lightgallery">
@@ -273,12 +287,10 @@
 		</div>
 	</div>
 	<!--風景1-->
-	<div class="container-fluid landscape1" style="width:100%;height: 50vh;padding:0">
-		<div class="landscape" style="">
-			<img class="d-flex flex-column justify-content-center for-view-img" src="resources/img/view1.jpg" style="width:100%;background-size: cover;background-position: center;position: absolute;">
-			<div class="d-flex flex-column justify-content-center" style="position: absolute;z-index: 1;width:100%;height:inherit;">
+	<div class="container-fluid landscape1" style="width:100%;padding:0;position:relative;">
+		<img class="d-flex flex-column justify-content-center for-view-img" src="resources/img/view1.jpg" style="width:100%;background-size: cover;background-position: center;position: relative;">
+		<div class="d-flex flex-column justify-content-center" style="position: absolute;z-index: 1;width:100%;top:calc(calc(50%) - 1rem)">
 				<div class="p-2 align-self-center w2">where and when</div>
-			</div>
 		</div>
 	</div>
 	
@@ -293,17 +305,44 @@
 	<!--婚宴資訊-->
 	<div class="container-fluid menu-3" style="width:100%;padding:1rem .5rem;background-color: #eee">
 			<!--婚宴資訊-->
-			<div class="row">
-				<div class="col-sm-12 col-lg-6 col-md-6 col-xl-6">
+			<div class="row" style="margin:0">
+				<div class="col-sm-12 col-lg-6 col-md-6 col-xl-6" style="padding:0">
 					<div class="d-flex justify-content-center" style="padding:0;height:100%">
 						<div class="p-2 align-self-center" style="width: fit-content;margin:auto auto">
-							<div class="date-info" style="margin-bottom:.5rem;width:fit-content"><i style="margin-right:0.5rem;padding:1rem;border-radius: 50%;color:white;background-color: #FFD306;margin-right:10px" class="far fa-calendar-minus"></i>日期：2020/06/06（六） 12:00</div>
-							<div class="date-info" style="margin-bottom:.5rem;width:fit-content"><i style="margin-right:0.5rem;padding:1rem;border-radius: 50%;color:white;background-color: #64A600;margin-right:10px" class="fas fas fa-h-square"></i>地點：彭園婚宴會館新板館</div>
-							<div class="date-info last" style="margin-bottom:.5rem;width:fit-content"><i style="margin-right:0.5rem;padding:1rem;border-radius: 50%;color:white;background-color: red;margin-right:10px" class="fas fa-map-marker-alt"></i>地址：新北市板橋區中山路一段161號（新北市政府內）</div>
+							<div class="date-info d-flex" style="margin-bottom:.5rem;width:fit-content">
+								<div class="p-2" style="padding:0 !important">
+									<i style="margin-right:0.5rem;padding:1rem;border-radius: 50%;color:white;background-color: #FFD306;margin-right:10px" class="far fa-calendar-minus"></i>
+								</div>
+								<div class="p-2 ww1"  style="padding:0 !important;width:4rem;margin:auto auto">
+								日期：</div>
+								<div class="p-2"  style="padding:0 !important;margin:auto auto">
+								2020/06/06（六） 12:00
+								</div>
+							</div>
+							<div class="date-info d-flex" style="margin-bottom:.5rem;width:fit-content">
+								<div class="p-2" style="padding:0 !important">
+									<i style="margin-right:0.5rem;padding:1rem;border-radius: 50%;color:white;background-color: #64A600;margin-right:10px" class="fas fas fa-h-square"></i>
+								</div>
+								<div class="p-2 ww1"  style="padding:0 !important;width:4rem;margin:auto auto">
+								地點：</div>
+								<div class="p-2"  style="padding:0 !important;margin:auto auto">
+								彭園婚宴會館新板館
+								</div>
+							</div>
+							<div class="date-info last d-flex" style="margin-bottom:.5rem;width:fit-content;margin:0">
+								<div class="p-2" style="padding:0 !important">
+									<i style="margin-right:0.5rem;padding:1rem;border-radius: 50%;color:white;background-color: red;margin-right:10px" class="fas fa-map-marker-alt"></i>
+								</div>
+								<div class="p-2 ww1"  style="padding:0 !important;width:4rem;margin:auto auto">地址：</div>
+								<div class="p-2"  style="padding:0 !important;margin:auto auto">
+									<div class="p-2" style="padding:0 !important">新北市板橋區中山路一段161號</div>
+									<div class="p-2" style="padding:0 !important">(新北市政府內)</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-12 col-lg-6 col-md-6 col-xl-6">
+				<div class="col-sm-12 col-lg-6 col-md-6 col-xl-6" style="padding:0">
 					<div class="p-2 align-self-center-12" style="padding:0">
 						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14462.573066351943!2d121.465541!3d25.0122349!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7a7f99a0015bfa6d!2z5b2t5ZyS5ama5a605pyD6aSoLeaWsOadv-mkqA!5e0!3m2!1szh-TW!2stw!4v1581830744079!5m2!1szh-TW!2stw" width="100%" height="250px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 					</div>
@@ -328,9 +367,9 @@
 				</div>
 		</div>
 	</div>
-	<!--出席回覆-->
-	<div id="google_form" class="container-fluid menu-4" style="width:100%;;background-color: #eee;padding:2rem 1rem">
-		<div class="d-flex flex-column justify-content-center" style="width:100%;padding:0 0 2rem 0">
+
+	<div id="form_text" class="container-fluid" style="width: 100%;background-color: #eee;padding:0 !important">
+		<div class="d-flex flex-column justify-content-center" style="width:100%;">
 			<div id="rsvp_area2" class="d-flex flex-column justify-content-center" style="margin-top:2rem">
 				<div class="p-2 rsvp-info2">誠摯的邀請您來參與及見證我們最重要的時刻</div>
 				<div class="p-2 rsvp-info2">我們懷著喜悅與感謝的心，期盼您的光臨。</div>
@@ -338,6 +377,9 @@
 				<div class="p-2 rsvp-info2">無論是否出席我們都能感受到您們的祝福！</div>
 			</div>
 		</div>
+	</div>
+	<!--出席回覆-->
+	<div id="google_form" class="container-fluid menu-4" style="width:100%;;background-color: #eee;padding:2rem 1rem">
 		<iframe name="hidden_iframe" id="hidden_iframe" style="display: none;" onload="this.onload=function(){window.location='index.html?replied=1'}"></iframe>
 		<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScyHj88HV8B0VRUELQ9klBGCLCTOn0-qsp9wXL7vrghYqs0Wg/formResponse" method="POST" id="ss-form" target="hidden_iframe" autocomplete="on"><ol role="list" class="ss-question-list" style="padding-left: 0;">
 			<!--姓名-->
@@ -400,8 +442,8 @@
 			</div>
 
 			<!-- optional 兒童座椅數量-->
-			<div id="child-amount" style="display: none">
-			兒童座椅數量
+			<div id="child-amount">
+			兒童座椅數量（如不需要請選0）
 				<div class="input-group mb-3">
 				  	<select class="custom-select" name="entry.339850552" id="entry_339850552" aria-label="兒童座椅數量  ">
 						<option value="0">0</option>
